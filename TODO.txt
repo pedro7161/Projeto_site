@@ -1,0 +1,11 @@
+- Aplicação cliente servidor em php e mysql;
+- A base de dados deverá ter no mínimo:
+      três tabelas relacionadas entre si;
+      triggers;
+      procedimentos armazenados;
+ - O layout deverá conter bootstrap;-done by default
+ - Será necessário operações CRUD nas três tabelas;
+ - Chamadas assíncronas;
+-Imagens;
+ -validação de inputs-done
+-Sistema de Logins
