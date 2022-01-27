@@ -9,7 +9,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
-  <body>
+  <body class="darkmode">
       <!-- Nav tabs -->
       <nav class="nav nav-pills flex-column flex-sm-row">
         <button class="flex-sm-fill text-sm-center nav-link active" id="1"onclick="reply_click()" href="#">Home</button>
@@ -23,7 +23,11 @@
           <div class="tab-pane fade show active" id="tab1Id" role="tabpanel"><div class="container"><p>a</p></div></div>
 
           <div class="tab-pane fade" id="tab2Id" role="tabpanel"><p>b</p></div>
-          <div class="tab-pane fade" id="tab3Id" role="tabpanel"></div>
+          <div class="tab-pane fade" id="tab3Id" role="tabpanel"><div class="container">
+            <p class="darkmode">dark mode:</p>   
+            <button class="flex-sm-fill text-sm-center darkmode" id="a" onclick="backgroundcolor(this.id)" href="#">on</button>
+            <button class="flex-sm-fill text-sm-center darkmode active" id="b" onclick="backgroundcolor(this.id)" href="#" >off</button>
+          </div></div>
           <div class="tab-pane fade" id="tab4Id" role="tabpanel">
               <div class="container d-flex justify-content-center" >
                 
