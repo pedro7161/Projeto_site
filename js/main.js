@@ -21,6 +21,16 @@ function reply_click() {
     element.classList.add("active");
 }
 
+function opendeck(id) {
+
+    var element = document.getElementById(id).innerText;
+
+
+    window.open("./deck.php?name=" + element);
+
+
+}
+
 // function backgroundcolor(id) {
 
 //     // alert(id)

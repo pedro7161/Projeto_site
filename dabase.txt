@@ -16,6 +16,7 @@ PRIMARY KEY(id)
 );
 CREATE TABLE allcards(
 id int AUTO_INCREMENT,
+id_deck int,
 name varchar(255) NOT NULL,
 type varchar(255) NOT NULL,   
 effect varchar(255) NOT NULL,   
