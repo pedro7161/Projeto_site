@@ -16,7 +16,8 @@ require("php/connection.php");
 include("php/session.php");
 $a = $_GET["name"];
 $user = $_SESSION['username'];
-$sql = "SELECT allcards.name,allcards.effect,allcards.type FROM allcards INNER JOIN decks where decks.id_player=$user and allcards.id_deck=decks.id;";
+
+$sql = "SELECT allcards.name,allcards.effect,allcards.type FROM allcards INNER JOIN decks where decks.id_player=$user and allcards.id_deck=decks.id and decks.name='$a';";
 echo("<h1>".$a."</h1>");
 echo("");
 //runs the query and prints the result

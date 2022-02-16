@@ -1,6 +1,5 @@
 function reply_click() {
-    var a = document.getElementById("tab3Id");
-    a.classList.remove("show");
+
     for (let i = 1; i <= 4; i++) {
         var element = document.getElementById(i);
 
@@ -19,6 +18,14 @@ function reply_click() {
     var element = document.getElementById("tab" + event.srcElement.id + "Id");
     element.classList.add("show");
     element.classList.add("active");
+
+    if (element != document.getElementById("tab1Id")) {
+        var fundo = document.getElementById("bodyfundo");
+        fundo.classList.remove("backimage");
+    } else {
+        var fundo = document.getElementById("bodyfundo");
+        fundo.classList.add("backimage");
+    }
 }
 
 function opendeck(id) {

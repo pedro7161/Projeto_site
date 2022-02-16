@@ -8,10 +8,7 @@ PRIMARY KEY(id)
 CREATE TABLE decks(
 id int AUTO_INCREMENT,
 id_player int,
-Id_card int,
 name varchar(255) NOT NULL,
-victory int,
-defeat int,
 PRIMARY KEY(id)
 );
 CREATE TABLE allcards(

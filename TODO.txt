@@ -3,11 +3,11 @@
       três tabelas relacionadas entre si;
       triggers;
       procedimentos armazenados;
- - O layout deverá conter bootstrap;-done by default
+ - O layout deverá conter bootstrap;
  - Será necessário operações CRUD nas três tabelas;
  - Chamadas assíncronas;
 -Imagens;
- -validação de inputs-done
+ -validação de inputs
 -Sistema de Logins
 
 

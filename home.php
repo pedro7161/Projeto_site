@@ -21,12 +21,16 @@ $user = $_SESSION['username'];
       background-color: #222;
       color: #e6e6e6;
     }
-
+    .backimage{
+      background-image:url('img/ExodiaMasterDuel.png');
+      background-repeat: no-repeat;
+      background-size:cover;
+    }
  
   </style>
 </head>
 
-<body class="darkmode">
+<body class="darkmode backimage" id="bodyfundo">
   <!-- Nav tabs -->
   <nav class="nav nav-pills flex-column flex-sm-row">
     <button class="flex-sm-fill text-sm-center nav-link active" id="1" onclick="reply_click(this.id)" href="#">Home</button>
@@ -38,15 +42,9 @@ $user = $_SESSION['username'];
   <!-- Tab panes -->
   <div class="tab-content">
     <div class="tab-pane fade show active" id="tab1Id" role="tabpanel">
-      <div class="container d-flex justify-content-center">
+      <div class="container d-flex justify-content-center" >
 
-        <form method="post" action="php/stats.php">
-          <label for="fname">deck name:</label><br>
-          <input type="text" id="fname" name="username"><br>
-          <label for="fname">ganhou:</label><br>
-          <input type="email" id="fname" name="email"><br><br>
-          <input type="submit" value="create account">
-        </form>
+ 
       </div>
     </div>
 
@@ -71,13 +69,16 @@ $user = $_SESSION['username'];
     </div>
     <div class="tab-pane fade" id="tab2Id" role="tabpanel">
       <div class="container">
+      
         <h2 class="d-flex justify-content-center"> Your Decks</h2>
+        <p>para ver as cartas dentro do deck é so clicar no nome</p>
         <?php
         require("php/connection.php");
-        $sql = "SELECT name,victory,defeat FROM decks  where id_player=$user;";
+        $sql = "SELECT name FROM decks  where id_player=$user;";
 
         //runs the query and prints the result
         $result = mysqli_query($db, $sql);
+        $j=0;
         if (!mysqli_query($db, $sql)) {
           die('Error: ' . mysqli_error($db));
         }
@@ -93,10 +94,10 @@ $user = $_SESSION['username'];
 
           // output data of each row
           while ($row = $result->fetch_row()) {
-            echo "<tr>";
-
+            echo "<tr onclick='opendeck(this.id)' id='td". $j ."'>";
+            $j++;
             for ($i = 0; $i < $result->field_count; $i++) {
-              echo "<td style='width:200px' onclick='opendeck(this.id)' id='td". $i ."'>" . $row[$i] . "</td>";
+              echo "<td style='width:200px' >" . $row[$i] . "</td>";
             }
 
             echo "</tr>";
