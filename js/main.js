@@ -26,6 +26,8 @@ function reply_click() {
         var fundo = document.getElementById("bodyfundo");
         fundo.classList.add("backimage");
     }
+
+
 }
 
 function opendeck(id) {
@@ -33,7 +35,7 @@ function opendeck(id) {
     var element = document.getElementById(id).innerText;
 
 
-    window.open("./deck.php?name=" + element);
+    window.open("./deck.php?name=" + element, "_self");
 
 
 }

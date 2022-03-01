@@ -36,9 +36,10 @@ session_destroy();
     <div class="container d-flex justify-content-center">
       <h1>Choose</h1>
     </div>
-      <div class="row">
+    <div class="container d-flex justify-content-center">
+      <div class="row" style="box-shadow: 5px 10px;">
 
-       <div class="col-sm-6 d-flex justify-content-center"style="border: solid black 2px;float:left">
+       <div class="col-sm-6 d-flex justify-content-center"style="border: solid black 2px;float:left;">
       
           <form method="post" action="php/register.php" >
           <h2>Register</h2>
@@ -64,7 +65,7 @@ session_destroy();
           </form>
           </div>
       </div>
-  
+      </div>
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 
